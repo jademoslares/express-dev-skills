@@ -4,13 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dev Skills</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <h1>Dev Skills</h1>
     <ul>
       <% skills.forEach(function(t) { %>
       <!-- <li><%= t.todo %> - <%= t.done ? 'done' : 'not done' %></li> -->
-      <li><a href="/skills/<%= t.id%>"><%= t.skill %></a></li>
+      <li>
+        <a
+          href="/skills/<%= t.id%>/<%= t.skill%>/<%= t.done ? 'Done' : 'Not Done'%>"
+          ><%= t.skill %></a
+        >
+      </li>
       <% }); %>
     </ul>
   </body>

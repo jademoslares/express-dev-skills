@@ -6,7 +6,7 @@ function index(req, res) {
 }
 
 function show(req, res) {
-  res.send(`skill = ${req.params.id}`);
+  res.send(`Skill = ${req.params.skill} Finished = ${req.params.done}`);
 }
 
 module.exports = {
